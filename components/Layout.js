@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import NextLink from "next/link";
+
 import { AppBar, Toolbar, Typography, Container, Link } from "@mui/material";
 
 import useStyles from "../utils/styles";

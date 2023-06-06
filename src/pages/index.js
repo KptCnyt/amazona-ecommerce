@@ -1,4 +1,3 @@
-"use client";
 import Layout from "../../components/Layout";
 import {
   Grid,
@@ -8,13 +7,20 @@ import {
   CardContent,
   Typography,
   Button,
-  CardActions
+  CardActions,
 } from "@mui/material";
 import NextLink from "next/link";
 import data from "../../utils/data";
-
+import { useEffect } from "react";
 
 export default function Home() {
+
+  useEffect(()=>{
+    console.log("component mounted")
+    return ()=>{
+      console.log("component will unmounted")
+    }
+  },[])
   return (
     <Layout>
       <div>
@@ -24,16 +30,16 @@ export default function Home() {
             <Grid item md={4} key={product.name}>
               <Card>
                 <NextLink href={`/product/${product.slug}`} passHref>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    image={product.image}
-                    title={product.name}
-                  ></CardMedia>
-                  <CardContent>
-                    <Typography>{product.name}</Typography>
-                  </CardContent>
-                </CardActionArea>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      image={product.image}
+                      title={product.name}
+                    ></CardMedia>
+                    <CardContent>
+                      <Typography>{product.name}</Typography>
+                    </CardContent>
+                  </CardActionArea>
                 </NextLink>
                 <CardActions>
                   <Typography>${product.price}</Typography>
