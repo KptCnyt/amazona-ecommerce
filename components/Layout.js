@@ -6,7 +6,6 @@ import { AppBar, Toolbar, Typography, Container, Link } from "@mui/material";
 
 import useStyles from "../utils/styles";
 
-
 export default function Layout({ children }) {
   const classes = useStyles();
   return (
@@ -17,17 +16,15 @@ export default function Layout({ children }) {
       <AppBar position="static" className={classes.navbar}>
         <Toolbar>
           <NextLink href="/" passHref>
-            <Link>
-              <Typography className={classes.brand}>amazona</Typography>
-            </Link>
+            amazona
           </NextLink>
           <div className={classes.grow}></div>
           <div>
             <NextLink href="/cart" passHref>
-                <Link>Cart</Link>
+              Cart
             </NextLink>
             <NextLink href="/cart" passHref>
-                <Link>Login</Link>
+              Login
             </NextLink>
           </div>
         </Toolbar>
