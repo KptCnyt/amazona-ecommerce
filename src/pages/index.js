@@ -11,16 +11,10 @@ import {
 } from "@mui/material";
 import NextLink from "next/link";
 import data from "../../utils/data";
-import { useEffect } from "react";
+
 
 export default function Home() {
 
-  useEffect(()=>{
-    console.log("component mounted")
-    return ()=>{
-      console.log("component will unmounted")
-    }
-  },[])
   return (
     <Layout>
       <div>
